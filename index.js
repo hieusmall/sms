@@ -5,7 +5,7 @@
 
 // Dependencies
 var server = require('./lib/server');
-
+console.log("Hello world");
 // Declare the app
 var app = {};
 
