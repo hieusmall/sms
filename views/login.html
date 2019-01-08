@@ -1,0 +1,54 @@
+<!-- Option js -->
+<script src="public/vendor/angular/session.js" type="text/javascript"></script>
+<style type="text/css">
+    .site-logo {
+        max-width: 100px;
+        margin: auto;
+    }
+</style>
+<div  ng-app="sessionHandlers"
+      ng-cloak
+      id="body-wrapper"
+      class="body-wrapper layout-row"
+      layout="row">
+
+    <div class="blue-sea-gradient" layout="row" layout-align="center center" flex ng-controller="LoginCtrl">
+        <md-card id="cardLogin">
+            <div class="site-logo" layout="row" layout-align="center center" layout-padding>
+                <img ng-src="{{logoUrl}}" class="site-logo-img md-card-image" alt="Logo">
+            </div>
+            <md-content class="loginFormWrapper md-no-momentum" layout="row" layout-align="center center" layout-padding>
+                <div flex>
+                    <form id="loginForm" name="loginForm" ng-submit="createSession($event)" action="">
+
+                        <md-input-container class="md-block">
+                            <label>User Name</label>
+                            <md-icon ng-bind="'person'"></md-icon>
+                            <input required type="text" name="userName" ng-model="formData.username" minlength="6" maxlength="32">
+                            <div ng-messages="loginForm.userName.$error">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                                    Username must be between 6 and 32 characters long.
+                                </div>
+                            </div>
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <label>Password</label>
+                            <md-icon class="" ng-bind="'lock'"></md-icon>
+                            <input required type="password" name="userPassword" ng-model="formData.password" minlength="6" maxlength="64">
+                            <div ng-messages="loginForm.userPassword.$error">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                                    Password is not correct.
+                                </div>
+                            </div>
+                        </md-input-container>
+
+                        <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                            <md-button type="submit" class="md-raised md-primary">Login <md-icon ng-bind="'arrow_right_alt'"></md-icon></md-button>
+                        </div>
+                    </form>
+                </div>
+            </md-content>
+        </md-card>
+    </div>
+</div>
