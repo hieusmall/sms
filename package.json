@@ -1,0 +1,27 @@
+{
+  "name": "sms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieusmall/sms.git"
+  },
+  "author": "hieusmall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hieusmall/sms/issues"
+  },
+  "homepage": "https://github.com/hieusmall/sms#readme",
+  "dependencies": {
+    "facebook-nodejs-business-sdk": "^3.2.4",
+    "xml-js": "^1.6.8"
+  }
+}
